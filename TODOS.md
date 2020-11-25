@@ -5,7 +5,10 @@
 - work on meta.yaml format
     - ca-homicides has ad-hoc edits that need to be added to the template
     - all older projects need to be fixed
+    - datastash needs a name
+    - original.csv is now main:main.csv
 - write a DataProject class
+- move data/ to d/?
 
 ## overall
 

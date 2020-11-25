@@ -1,6 +1,6 @@
-# datatexts.github.io
+# dirtdata.github.io
 
-https://datatexts.github.io
+https://dirtdata.github.io
 
 Real world data files for examples, i.e. yet another repo where I stash datasets that I want to link to online. Because I keep forgetting the past repos I've stashed data in.
 
@@ -44,13 +44,13 @@ Which means the local data file paths are:
 
 And these data files are hosted online at these Github pages URLs:
 
-- [https://datatexts.github.io/data/us-congress-legislators-current/original.csv](https://datatexts.github.io/data/us-congress-legislators-current/original.csv)
-- [https://datatexts.github.io/data/us-congress-legislators-current/sample.csv](https://datatexts.github.io/data/us-congress-legislators-current/sample.csv)
+- [https://dirtdata.github.io/data/us-congress-legislators-current/original.csv](https://dirtdata.github.io/data/us-congress-legislators-current/original.csv)
+- [https://dirtdata.github.io/data/us-congress-legislators-current/sample.csv](https://dirtdata.github.io/data/us-congress-legislators-current/sample.csv)
 
 And they can also be found in the Github repo:
 
-- https://github.com/datatexts/datatexts.github.io/blob/main/data/us-congress-legislators-current/original.csv
-- https://github.com/datatexts/datatexts.github.io/blob/main/data/us-congress-legislators-current/sample.csv
+- https://github.com/dirtdata/dirtdata.github.io/blob/main/data/us-congress-legislators-current/original.csv
+- https://github.com/dirtdata/dirtdata.github.io/blob/main/data/us-congress-legislators-current/sample.csv
 
 
 
