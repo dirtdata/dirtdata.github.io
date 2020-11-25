@@ -1,0 +1,85 @@
+
+
+id: chicago-lobbying-activity
+title: Chicago Lobbying Activity
+updated_at: 2020-11-25
+version: 1.0
+description: |
+  tk verbatim: List of each City agency lobbied, whether it involved legislative or administrative action (or both) and a brief description of the action promoted or opposed, as reported by registered lobbyists. See http://www.cityofchicago.org/city/en/depts/ethics/provdrs/lobby.html for more information on the Board of Ethics' role in regulating and reporting on lobbying in Chicago.
+
+
+status:
+  type: new
+  notes:
+    - any other data portal lobbyist data?
+    - link to related docs and ethics sites and stories
+
+
+downloads:
+  main:
+    path: main.csv
+    url: https://data.cityofchicago.org/api/views/pahz-egmi/rows.csv?accessType=DOWNLOAD
+
+  # sample:
+  #   path: sample.csv
+  #   links:
+  #     - title: Google Sheet
+  #       url: http_example_com
+  #   wrangling:
+  #     cmd: |
+  #       cat main.csv | hey > filtered_subset.csv
+
+  # single:
+  #   path: single.csv
+
+  # schema:
+  #   path: schema.csv # optional??
+
+
+#################
+extra_downloads:
+  - title: Registered Lobbyists
+    path: lobbyists.csv
+    url: https://data.cityofchicago.org/api/views/tq3e-t5yq/rows.csv?accessType=DOWNLOAD
+    links:
+      - title: LANDING PAGE LOBBYISTS SOCRATA TK DATA
+        url: https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyists/tq3e-t5yq
+
+  # - title: Filtered data
+  #   path: filtered_subset.csv
+  #   wrangling:
+  #     cmd: |
+  #       cat main.csv | hey > filtered_subset.csv
+
+
+
+
+license:
+  name: Public domain
+publisher:
+  name: City of Chicago Board of Ethics
+  url: https://www.chicago.gov/city/en/depts/ethics.html
+
+sources:
+  landing_page:
+    url: https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbying-Activity/pahz-egmi
+
+
+  # original_source:
+  #   url: ORIGINAL
+
+
+
+  # borrowing from frictionless data specs
+  # https://specs.frictionlessdata.io/data-package/#sources
+  # "The raw sources for this data package. It MUST be an array of Source objects. Each Source object MUST have a title and MAY have path and/or email properties. Example:"
+    #   "sources": [{
+    #   "title": "World Bank and OECD",
+    #   "path": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
+    # }]
+
+
+# `references` is where we list any other links germane to understanding the data
+links:
+  - title: "Chicago Board of Ethics: Lobbyists"
+    url: https://www.chicago.gov/city/en/depts/ethics/provdrs/lobby.html
