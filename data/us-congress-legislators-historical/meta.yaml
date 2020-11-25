@@ -1,0 +1,17 @@
+title: Historical Members of the United States Congress
+updated_at: 2020-11-24
+description: |
+  Historical Members of Congress, i.e. all Members of Congress except those in us-congress-legislators-current, which is a snapshot of the 116th Congress.
+license: CC0 1.0 Universal
+
+
+publisher:
+  name: the @unitedstates project
+  url: https://theunitedstates.io/
+
+sources:
+  homepage: https://github.com/unitedstates/congress-legislators
+  download: https://theunitedstates.io/congress-legislators/legislators-historical.csv
+references:
+  - title: Data dictionary
+    url: https://github.com/unitedstates/congress-legislators#data-dictionary

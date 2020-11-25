@@ -1,0 +1,33 @@
+title: Current Members of the United States Congress
+updated_at: 2020-11-24
+description: |
+  Currently serving members of the U.S. Congress. This repo's specific snapshot is of the 116th Congress in 2020.
+
+files:
+    - path: orignal.csv
+      default: true
+    - path: sample.csv
+      description: |
+        Just a handful of rows
+      wrangle_script: |
+        cat original.csv \
+          | csvgrep -c last_name \
+              -r 'Brown|Sanders|Romney|Harris|McSally|Cárdenas|Wasserman|Collins|Tlaib|LaHood|Riggleman' \
+          > sample.csv
+
+
+
+
+
+license: CC0 1.0 Universal
+publisher:
+  name: the @unitedstates project
+  url: https://theunitedstates.io/
+
+sources:
+  homepage: https://github.com/unitedstates/congress-legislators
+  download: https://theunitedstates.io/congress-legislators/legislators-current.csv
+
+references:
+  - title: Data dictionary
+    url: https://github.com/unitedstates/congress-legislators#data-dictionary
