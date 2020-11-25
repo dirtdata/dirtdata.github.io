@@ -34,7 +34,7 @@ files:
       Just a little more than a dozen rows
 ```
 
-Which means the data file paths are:
+Which means the local data file paths are:
 
 - [data/us-congress-legislators-current/original.csv](data/us-congress-legislators-current/original.csv)
 - [data/us-congress-legislators-current/sample.csv](data/us-congress-legislators-current/sample.csv)
@@ -44,6 +44,10 @@ And these data files are hosted online at these Github pages URLs:
 - [https://datatexts.github.io/data/us-congress-legislators-current/original.csv](https://datatexts.github.io/data/us-congress-legislators-current/original.csv)
 - [https://datatexts.github.io/data/us-congress-legislators-current/sample.csv](https://datatexts.github.io/data/us-congress-legislators-current/sample.csv)
 
+And they can also be found in the Github repo:
+
+- https://github.com/datatexts/datatexts.github.io/blob/main/data/us-congress-legislators-current/original.csv
+- https://github.com/datatexts/datatexts.github.io/blob/main/data/us-congress-legislators-current/sample.csv
 
 
 
