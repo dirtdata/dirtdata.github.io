@@ -5,10 +5,9 @@ slug: chicago-environmental-inspections
 title: City of Chicago Environmental Inspections
 updated_at: 2020-11-24
 description: |
-  Inspections conducted by the Department of Environment (DOE) from April, 1997 to December 31, 2011 and by the Department of Public Health (CDPH) since January 1, 2012. On January 1, 2012, the Department of Environment was disbanded and all its inspection, permitting, and enforcement authorities were transferred to the CDPH
+  The environmental inspections conducted by the city of Chicago from 2010 through 2014.
 
-  (verbatim copy-paste)
-
+  Inspections conducted from 1997 to 2011 were conducted by the Department of Environment. In 2012, the DOE was disbanded and its inspection, permitting, and enforcement authorities were transferred to the Department of Public Health
 
 license: Public domain
 publisher:
@@ -17,8 +16,8 @@ publisher:
 
 
 sources:
-    homepage: https://data.cityofchicago.org/Environment-Sustainable-Development/CDPH-Environmental-Inspections/i9rk-duva
-    download: https://data.cityofchicago.org/api/views/i9rk-duva/rows.csv?accessType=DOWNLOAD
+    homepage: https://data.cityofchicago.org/Environment-Sustainable-Development/Chicago-Environmental-Inspections-2010-2014-Dept-o/9vff-tiki
+    download: https://data.cityofchicago.org/api/views/9vff-tiki/rows.csv?accessType=DOWNLOAD
 
 
 references:
