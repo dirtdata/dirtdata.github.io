@@ -13,12 +13,11 @@ status:
       - xsv search '\b\d{3}\b'  -s 7 alldata.csv | xsv count # 41289
       - xsv search '\b\d{1,4}\b'  -s 7 alldata.csv > lowbonds.csv (40MB)
 
+    - basically, need to make a Socrata filtered view to get from
+
 sources:
   landing_page:
     url: https://data.ct.gov/Public-Safety/Accused-Pre-Trial-Inmates-in-Correctional-Faciliti/b674-jy6w
-
-  download:
-    url:
 
 
 publisher:

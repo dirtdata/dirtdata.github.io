@@ -1,11 +1,10 @@
-import pyaml
 from pathlib import Path
 import requests
 from ruamel.yaml import YAML
 yaml = YAML()
 
 DATA_DIR = Path('data')
-TEMPLATES = {'meta': Path('assets/schemas/meta.template.yaml')}
+TEMPLATES = {'meta': Path('assets/templates/meta.template.yaml')}
 
 
 def fetch_file(url:str) -> bytes:
@@ -30,15 +29,15 @@ def proj_meta(id:str) -> dict:
 
 
 def proj_file_inventory(id:str) -> dict:
-    meta = proj_meta(id)
-    stash = meta['datastash']
-
     d = {}
+    stash = proj_meta(id)['downloads']
+
     if stash.get('main'):
         d['main'] = stash['main']
 
-    if stash.get('extra'):
-        for o in stash['extra']:
-            d[o['path']] = o
+    extras = proj_meta(id)['extra_downloads']
+
+    for o in extras:
+        d[o['path']] = o
 
     return d

@@ -1,0 +1,81 @@
+
+
+id: dataset-slug-thingy
+title: Human_readable_headline
+updated_at: YYYY-MM-DD
+version: 1.0
+description: |
+  Human_and_seo_friendly_description. Can be multi-sentence
+status:
+  type: new
+  notes:
+    - notes to self
+    - about the state of this data
+    - just plain text sentences
+
+license:
+  name: name_of_license # e.g. CC0 1.0 Universal
+  url: license_url
+
+downloads: # TK in lieu of b etter name
+  main:
+    path: main.csv
+    url: http_example_com_dot_csv
+
+  sample:
+    path: sample.csv
+    links:
+      - title: Google Sheet
+        url: http_example_com
+    wrangling:
+      cmd: |
+        cat main.csv | hey > filtered_subset.csv
+
+  single:
+    path: single.csv
+
+  # schema:
+  #   path: schema.csv # optional??
+
+
+#################
+extra_downloads:
+  - title: Some kind of data variation
+    path: other_variation.csv
+    url: http_example_other_variation.csv
+
+  - title: Filtered data
+    path: filtered_subset.csv
+    wrangling:
+      cmd: |
+        cat main.csv | hey > filtered_subset.csv
+
+
+
+publisher:
+  name: Publisher_Name #.e.g. The @unitedstates project
+  url: https://example.com/publisher/homepage
+
+sources:
+  landing_page:
+    url: https://github.com/unitedstates/congress-legislators
+
+
+  # original_source:
+  #   url: ORIGINAL
+
+
+
+  # borrowing from frictionless data specs
+  # https://specs.frictionlessdata.io/data-package/#sources
+  # "The raw sources for this data package. It MUST be an array of Source objects. Each Source object MUST have a title and MAY have path and/or email properties. Example:"
+    #   "sources": [{
+    #   "title": "World Bank and OECD",
+    #   "path": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
+    # }]
+
+
+# `references` is where we list any other links germane to understanding the data
+links:
+  - title: Data dictionary
+    url: https://github.com/unitedstates/congress-legislators#data-dictionary

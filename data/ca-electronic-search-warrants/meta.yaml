@@ -1,0 +1,91 @@
+
+
+id: ca-electronic-search-warrants
+title: California Electronic Search Warrant Notifications
+updated_at: 2020-11-25
+version: 1.0
+description: |
+  tk verbatim copy:
+
+  California law requires any government entity that executes a warrant, or obtains information in an emergency from an electronic communication service provider or from an electronic device shall notify the identified targets of the warrant or emergency request that information about them has been compelled or obtained. The law requires that the government entity provide specific information about the investigation under which the information is sought and provide a copy of the warrant or a written statement setting forth facts giving rise to the emergency. (California Penal Code s. 1546.2)
+
+
+
+status:
+  type: new
+  notes:
+    - auto-downloaded
+    - got extra years
+
+
+downloads: # TK in lieu of b etter name
+  main:
+    path: main.csv
+    url: https://data-openjustice.doj.ca.gov/sites/default/files/dataset/2019-12/electronic-search-warrant-notifications.csv
+
+  # sample:
+  #   path: sample.csv
+  #   links:
+  #     - title: Google Sheet
+  #       url: http_example_com
+  #   wrangling:
+  #     cmd: |
+  #       cat main.csv | hey > filtered_subset.csv
+
+  # single:
+  #   path: single.csv
+
+  # schema:
+  #   path: schema.csv # optional??
+
+
+#################
+extra_downloads:
+  - title: 2016 data
+    path: 2016.xlsx
+    url: https://data-openjustice.doj.ca.gov/sites/default/files/dataset/2018-08/eswn2016.xlsx
+
+  - title: 2017 data
+    path: 2017.xlsx
+    url: https://data-openjustice.doj.ca.gov/sites/default/files/dataset/2018-08/eswn2017.xlsx
+
+  - title: 2018 data
+    path: 2018.xlsx
+    url: https://data-openjustice.doj.ca.gov/sites/default/files/dataset/2019-07/eswn2018_0.xlsx
+
+  - title: 2019 data
+    path: 2019.xlsx
+    url: https://data-openjustice.doj.ca.gov/sites/default/files/dataset/2020-07/eswn2019.xlsx
+
+
+
+license:
+  name: Public domain # e.g. CC0 1.0 Universal
+
+publisher:
+  name: California Department of Justice #.e.g. The @unitedstates project
+  project: OpenJustice
+  url: https://openjustice.doj.ca.gov/resources/about-openjustice
+
+sources:
+  landing_page:
+    url: https://openjustice.doj.ca.gov/data
+
+  # original_source:
+  #   url: ORIGINAL
+
+
+
+  # borrowing from frictionless data specs
+  # https://specs.frictionlessdata.io/data-package/#sources
+  # "The raw sources for this data package. It MUST be an array of Source objects. Each Source object MUST have a title and MAY have path and/or email properties. Example:"
+    #   "sources": [{
+    #   "title": "World Bank and OECD",
+    #   "path": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
+    # }]
+
+
+# `references` is where we list any other links germane to understanding the data
+links:
+  - title: Data dictionary
+    url: https://github.com/unitedstates/congress-legislators#data-dictionary

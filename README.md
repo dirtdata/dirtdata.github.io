@@ -14,12 +14,17 @@ Real world data files for examples, i.e. yet another repo where I stash datasets
 
 This repo is mostly focused on data storing and example documentation, and to be used by other repos.
 
+## Issues/Flaws/Limitations
+
+- Unlike [Datahub.io's core data service](https://datahub.io/docs/core-data), DirtData doesn't provide much beyond data and documentation. No wrangling, no standardization.
+- Most of this data is most definitely not just ready to use or visualize
+
 
 ## TK description stuff
 
 ### How things are organized (TK)
 
-Each dataset has a slug, e.g. `us-congress-legislators-current`.
+Each dataset has an `id` , e.g. `us-congress-legislators-current`.
 
 Each dataset has a subfolder in [data/](data/) corresponding to its slug, e.g. [data/us-congress-legislators-current](data/us-congress-legislators-current).
 
@@ -46,6 +51,7 @@ And these data files are hosted online at these Github pages URLs:
 
 - [https://dirtdata.github.io/data/us-congress-legislators-current/original.csv](https://dirtdata.github.io/data/us-congress-legislators-current/original.csv)
 - [https://dirtdata.github.io/data/us-congress-legislators-current/sample.csv](https://dirtdata.github.io/data/us-congress-legislators-current/sample.csv)
+
 
 And they can also be found in the Github repo:
 

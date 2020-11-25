@@ -1,0 +1,96 @@
+
+
+id: nhtsa-recalls
+title: RECALLS
+updated_at: YYYY-MM-DD
+version: 1.0
+description: |
+  verbatim: The INVESTIGATION file contains all NHTSA safety-related defect investigations opened since 1972.
+
+status:
+  type: new/just collected into TMPWORK
+  notes:
+    - have a few more docs to collect
+    - because original data file is a zip, collection was done manually
+    - and tempurl attribute added to main for now
+    - FLAT_RCL.txt is 180+ MB!
+
+license:
+  name: Public domain # e.g. CC0 1.0 Universal
+  url: TKTK
+
+downloads: # TK in lieu of b etter name
+  main:
+    path: main.tsv
+
+    tempurl: https://www-odi.nhtsa.dot.gov/downloads/folders/Recalls/FLAT_RCL.zip
+    wrangling:
+        cmd: |
+            mkdir -p TMPWORK/
+            curl -Lo TMPWORK/FLAT_RCL.zip https://www-odi.nhtsa.dot.gov/downloads/folders/Recalls/FLAT_RCL.zip
+            unzip -o TMPWORK/FLAT_RCL.zip -d TMPWORK/
+
+
+            cp TMPWORK/flat_inv.txt main.tsv
+  # sample:
+  #   path: sample.csv
+  #   links:
+  #     - title: Google Sheet
+  #       url: http_example_com
+  #   wrangling:
+  #     cmd: |
+  #       cat main.csv | hey > filtered_subset.csv
+
+  # single:
+  #   path: single.csv
+
+  # schema:
+  #   path: schema.csv # optional??
+
+
+#################
+extra_downloads: []
+  # - title: Some kind of data variation
+  #   path: other_variation.csv
+  #   url: http_example_other_variation.csv
+
+  # - title: Filtered data
+  #   path: filtered_subset.csv
+  #   wrangling:
+  #     cmd: |
+  #       cat main.csv | hey > filtered_subset.csv
+
+
+
+publisher:
+  name: Publisher_Name #.e.g. The @unitedstates project
+  url: https://example.com/publisher/homepage
+
+docs:
+  - title: Data README
+    url: https://www-odi.nhtsa.dot.gov/downloads/folders/Recalls/RCL.txt
+    path: recalls-readme.txt
+
+  - title: "Importing Recalls data into MS Access"
+    url: https://www-odi.nhtsa.dot.gov/downloads/folders/Recalls/Import_Instructions_Recalls.pdf
+    path: Import_Instructions_Recalls.pdf
+
+sources:
+  landing_page:
+    url: http://www-odi.nhtsa.dot.gov/downloads/index.cfm
+
+
+  # original_source:
+  #   url: ORIGINAL
+
+
+
+  # borrowing from frictionless data specs
+  # https://specs.frictionlessdata.io/data-package/#sources
+  # "The raw sources for this data package. It MUST be an array of Source objects. Each Source object MUST have a title and MAY have path and/or email properties. Example:"
+    #   "sources": [{
+    #   "title": "World Bank and OECD",
+    #   "path": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
+    # }]
+
+

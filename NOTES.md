@@ -8,6 +8,11 @@ just journaling my thought and design process
 - check out datapackage.json schema from github/datasets: 
     - https://github.com/datasets/country-codes/blob/master/datapackage.json
 
+- design philosophy
+    - each DataPot should have one canonical main data file
+    - each DataPot should be CSV or JSON
+    - the main canonical data file should be as unaltered as possible from the original source, including the keeping of unneeded columns.
+
 ## Observations of other data repos
 
 Git cloning other data repos and studying their organization

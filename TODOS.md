@@ -3,12 +3,14 @@
 ## priority
 
 - work on meta.yaml format
+    - [x] move original.csv to main.csv in all repos
+
     - ca-homicides has ad-hoc edits that need to be added to the template
     - all older projects need to be fixed
     - datastash needs a name
-    - original.csv is now main:main.csv
-- write a DataProject class
-- move data/ to d/?
+- write a DataPackage/DataPot class
+- move data/ to pots/?
+    - dirtdata.github.io/p/data-id
 
 ## overall
 
@@ -85,12 +87,40 @@ optional:
 
 
 # cli/makefile
-- feed process: gathers and validates metas
+
+- collect
+    - when main file is a result of processing the raw download, i.e. a zip file, need
+        some logic to deal with that
+        - it shouldn't have a url, but it should refer to a original source link
+        - maybe have a tempurl attribute, which triggers the manual collection scripting
+
+- feeds/index/publish
+    - collects and analyzes all the metas
     - produces a atom-compatible xml feed
     - produces flat CSVs:
         - main.csv: important attributes, and URLs for original and sample csv
         - subs.csv enumerates all URLs and is meant to be joined by slug with main.csv
     - produces JSON
+-  publish
+    - uses meta.yaml to create a publish.json, which is meant for public API access and NOT meant to be human edited
+    - given a dataset id, read its meta.yaml, and produce stats.json/publish.json
+        - stats
+            - row and column count
+            - bytes count
+            - last fetched
+        - urls
+            - main data
+                - via Github pages
+                - via Github web repo
+            - sample
+                - Github Pages download
+                - web repo
+                - gsheets
+            - single
+                - Github pages URL
+                - some kind of interactive view
+        - docs
+        - links
 
 
 ## datasets
@@ -105,15 +135,15 @@ Things to get
 - [?] dot gov domains
 - [?] denver pot sales
 - leso data
-- [ ] ct pre trial inmates
+- [?] ct pre trial inmates
     - https://data.ct.gov/Public-Safety/Accused-Pre-Trial-Inmates-in-Correctional-Faciliti/b674-jy6w
-- berkeley police stops
-    - https://data.cityofberkeley.info/Public-Safety/Berkeley-PD-Stop-Data-Jan-26-2015-to-Sep-30-2020-/4tbf-3yt8
-- ct police stops
+    - berkeley police stops
+        - https://data.cityofberkeley.info/Public-Safety/Berkeley-PD-Stop-Data-Jan-26-2015-to-Sep-30-2020-/4tbf-3yt8
+- [ ] ct police stops
 - [ ] ca doj open data: https://openjustice.doj.ca.gov/data
     - e warrants
         - https://data-openjustice.doj.ca.gov/sites/default/files/dataset/2019-12/electronic-search-warrant-notifications.csv
-    - homicides:
+    - [o] homicides:
         - https://data-openjustice.doj.ca.gov/sites/default/files/dataset/2020-07/Homicide%20Context_062419.pdf
         - actual: https://data-openjustice.doj.ca.gov/sites/default/files/dataset/2020-07/Homicide%20_Actuals_1987-2019.csv
         - justifiable: https://data-openjustice.doj.ca.gov/sites/default/files/dataset/2020-07/Homicide_Justifiable_1987-2019.csv

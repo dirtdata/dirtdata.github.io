@@ -8,6 +8,9 @@ version: 1.0
 description: |
   TK verbatim copy-paste: Tabulations of all surnames occurring 100 or more times in the 2010 Census returns
 
+status:
+  notes:
+    - no idea what to do with main.xlsx, e.g. how to expose it to public user
 
 files:
   - path: orignal.csv

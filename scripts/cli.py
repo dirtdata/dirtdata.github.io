@@ -77,7 +77,7 @@ def init(id, dry_run):
         click.echo(f"Creating meta file: {metapath}", err=True)
 
         if not dry_run:
-            metapath.write_text(META_TEMPLATE_PATH.read_text())
+            metapath.write_text(TEMPLATES['meta'].read_text())
 
 
 if __name__ == '__main__':
