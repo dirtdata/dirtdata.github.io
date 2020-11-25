@@ -1,6 +1,6 @@
 
 
-id: dataset-slug-thingy
+id: DATASET_ID_SLUGGY
 title: Human_readable_headline
 updated_at: YYYY-MM-DD
 version: 1.0
@@ -13,44 +13,45 @@ status:
     - about the state of this data
     - just plain text sentences
 
-license:
-  name: name_of_license # e.g. CC0 1.0 Universal
-  url: license_url
 
 downloads: # TK in lieu of b etter name
   main:
     path: main.csv
     url: http_example_com_dot_csv
 
-  sample:
-    path: sample.csv
-    links:
-      - title: Google Sheet
-        url: http_example_com
-    wrangling:
-      cmd: |
-        cat main.csv | hey > filtered_subset.csv
+  # sample:
+  #   path: sample.csv
+  #   links:
+  #     - title: Google Sheet
+  #       url: http_example_com
+  #   wrangling:
+  #     cmd: |
+  #       cat main.csv | hey > filtered_subset.csv
 
-  single:
-    path: single.csv
+  # single:
+  #   path: single.csv
 
   # schema:
   #   path: schema.csv # optional??
 
 
 #################
-extra_downloads:
-  - title: Some kind of data variation
-    path: other_variation.csv
-    url: http_example_other_variation.csv
+extra_downloads: []
+  # - title: Some kind of data variation
+  #   path: other_variation.csv
+  #   url: http_example_other_variation.csv
 
-  - title: Filtered data
-    path: filtered_subset.csv
-    wrangling:
-      cmd: |
-        cat main.csv | hey > filtered_subset.csv
+  # - title: Filtered data
+  #   path: filtered_subset.csv
+  #   wrangling:
+  #     cmd: |
+  #       cat main.csv | hey > filtered_subset.csv
 
 
+
+license:
+  name: name_of_license # e.g. CC0 1.0 Universal
+  url: license_url
 
 publisher:
   name: Publisher_Name #.e.g. The @unitedstates project
@@ -58,7 +59,7 @@ publisher:
 
 sources:
   landing_page:
-    url: https://github.com/unitedstates/congress-legislators
+    url: ""
 
 
   # original_source:
@@ -76,6 +77,6 @@ sources:
 
 
 # `references` is where we list any other links germane to understanding the data
-links:
-  - title: Data dictionary
-    url: https://github.com/unitedstates/congress-legislators#data-dictionary
+links: []
+  # - title: Data dictionary
+  #   url: https://github.com/unitedstates/congress-legislators#data-dictionary

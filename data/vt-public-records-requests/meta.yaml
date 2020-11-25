@@ -1,0 +1,84 @@
+
+
+id: vt-public-records-requests
+title: Human_readable_headline
+updated_at: YYYY-MM-DD
+version: 1.0
+description: |
+  Public records requests to the State of Vermont through 2018
+
+  (2019-onwards is a different data format)
+status:
+  type: new
+  notes:
+    - notes to self
+    - about the state of this data
+    - just plain text sentences
+
+license:
+  name: name_of_license # e.g. CC0 1.0 Universal
+  url: license_url
+
+downloads: # TK in lieu of b etter name
+  main:
+    path: main.csv
+    url: https://data.vermont.gov/api/views/fwxs-ckd2/rows.csv?accessType=DOWNLOAD
+
+  # sample:
+  #   path: sample.csv
+  #   links:
+  #     - title: Google Sheet
+  #       url: http_example_com
+  #   wrangling:
+  #     cmd: |
+  #       cat main.csv | hey > filtered_subset.csv
+
+  # single:
+  #   path: single.csv
+
+  # schema:
+  #   path: schema.csv # optional??
+
+
+#################
+extra_downloads:
+  - title: Public records requests since 2019
+    path: 2019-current-requests.csv
+    url: https://data.vermont.gov/api/views/476u-uxxa/rows.csv?accessType=DOWNLOAD
+    landing_page: https://data.vermont.gov/dataset/Public-Records-Requests/476u-uxxa
+
+  # - title: Filtered data
+  #   path: filtered_subset.csv
+  #   wrangling:
+  #     cmd: |
+  #       cat main.csv | hey > filtered_subset.csv
+
+
+
+publisher:
+  name: State of Vermont Agency of Administration
+  url: https://aoa.vermont.gov/
+
+sources:
+  landing_page:
+    url: https://data.vermont.gov/Finance/Public-Record-Requests/fwxs-ckd2
+
+
+  # original_source:
+  #   url: ORIGINAL
+
+
+
+  # borrowing from frictionless data specs
+  # https://specs.frictionlessdata.io/data-package/#sources
+  # "The raw sources for this data package. It MUST be an array of Source objects. Each Source object MUST have a title and MAY have path and/or email properties. Example:"
+    #   "sources": [{
+    #   "title": "World Bank and OECD",
+    #   "path": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
+    # }]
+
+
+# `references` is where we list any other links germane to understanding the data
+links: []
+  # - title: Data dictionary
+  #   url: https://github.com/unitedstates/congress-legislators#data-dictionary

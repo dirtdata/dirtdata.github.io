@@ -41,6 +41,9 @@ extra_downloads:
   - title: Registered Lobbyists
     path: lobbyists.csv
     url: https://data.cityofchicago.org/api/views/tq3e-t5yq/rows.csv?accessType=DOWNLOAD
+    description: |
+      TK verbatim Lobbyists registered with the Chicago Board of Ethics since 2012. Due to requirements for lobbyists to re-register and the importance of showing year for most lobbying-related data, the same lobbyist often will have multiple records.
+
     links:
       - title: LANDING PAGE LOBBYISTS SOCRATA TK DATA
         url: https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyists/tq3e-t5yq
