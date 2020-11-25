@@ -1,0 +1,61 @@
+# meta.yaml TEMPLATE
+
+id: dataset-slug-thingy  # should already be implicit from meta.yaml's parent dir, but good to be explicit
+title: Human_readable_headline
+updated_at: YYYY-MM-DD
+version: 1.0 # maybe we'll use this?
+description: |
+  Human_and_seo_friendly_description
+
+files:
+  - path: orignal.csv
+    default: true
+
+  - path: original.json
+
+  - path: sample.csv
+    description: |
+      Why_does_this_sample_exist and what_is_in_it
+    wrangle_script: |
+      # just a way to record the code used to create the sample, just in case I need to repeate it
+      cat original.csv | /path/to/script.that.wrangled  > sample.csv
+
+
+
+license:
+  name: name_of_license # e.g. CC0 1.0 Universal
+  url: license_url
+
+publisher:
+  name: Publisher_Name #.e.g. The @unitedstates project
+  url: https://example.com/publisher/homepage
+
+sources:
+  # sources is a dict with canonical keys:
+  #   landing_page, download
+  # each pointing to an object that at minimum have url:
+
+  # homepage/landing page on which the data is linked from -- so user can be directed to
+  # its original presentation context, and just incase we want to take a Wayback snapshot of it
+  landing_page:
+    url: https://github.com/unitedstates/congress-legislators
+
+  # A direct download URL to get the data – it should be curl-able without authentication
+  download:
+    url: https://theunitedstates.io/congress-legislators/legislators-current.csv
+
+
+
+  # borrowing from frictionless data specs
+  # https://specs.frictionlessdata.io/data-package/#sources
+  # "The raw sources for this data package. It MUST be an array of Source objects. Each Source object MUST have a title and MAY have path and/or email properties. Example:"
+    #   "sources": [{
+    #   "title": "World Bank and OECD",
+    #   "path": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
+    # }]
+
+
+# `references` is where we list any other links germane to understanding the data
+references:
+  - title: Data dictionary
+    url: https://github.com/unitedstates/congress-legislators#data-dictionary

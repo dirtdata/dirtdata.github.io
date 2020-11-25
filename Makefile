@@ -1,5 +1,9 @@
-.PHONY: help manifest
+.PHONY: help manifest clean
 .DEFAULT_GOAL := help
+
+clean:
+	echo cleaning
+	# should clean out all TMPWORK dirs
 
 help:
 	echo 'Read the README at README.md!'

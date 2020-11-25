@@ -1,7 +1,7 @@
 # IN PROGRESS
 # - Not sure how to store this data since the full download is 116MB
 
-slug: chicago-environmental-inspections
+id: chicago-environmental-inspections
 title: City of Chicago Environmental Inspections
 updated_at: 2020-11-24
 description: |
@@ -9,20 +9,33 @@ description: |
 
   Inspections conducted from 1997 to 2011 were conducted by the Department of Environment. In 2012, the DOE was disbanded and its inspection, permitting, and enforcement authorities were transferred to the Department of Public Health
 
-license: Public domain
+files:
+  - path: original.csv
+    default: true
+
+
+license:
+  name: Public domain
+
 publisher:
   name: City of Chicago Data Portal
   url: https://data.cityofchicago.org/
 
 
+
+
+
 sources:
-    homepage: https://data.cityofchicago.org/Environment-Sustainable-Development/Chicago-Environmental-Inspections-2010-2014-Dept-o/9vff-tiki
-    download: https://data.cityofchicago.org/api/views/9vff-tiki/rows.csv?accessType=DOWNLOAD
+    landing_page:
+      url: https://data.cityofchicago.org/Environment-Sustainable-Development/Chicago-Environmental-Inspections-2010-2014-Dept-o/9vff-tiki
+    download:
+      url: https://data.cityofchicago.org/api/views/9vff-tiki/rows.csv?accessType=DOWNLOAD
 
 
 references:
-  title: Google Sheet sample
-  url: 'https://docs.google.com/spreadsheets/d/1GYe3XuUI_jsnWbMz17FtT6A5xZ8GPSV1IO6srhjy1v8/edit#gid=0'
+  # TK: should google sheet samples be put here? Or should it be associated with files/samples objects?
+  - title: Google Sheet sample
+    url: 'https://docs.google.com/spreadsheets/d/1GYe3XuUI_jsnWbMz17FtT6A5xZ8GPSV1IO6srhjy1v8/edit#gid=0'
 
 
     # wrangling: |

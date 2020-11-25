@@ -55,9 +55,11 @@ And they can also be found in the Github repo:
 
 This repo takes inspiration and ideas from:
 
-
-- https://github.com/datasets
+- https://github.com/fivethirtyeight/data
+- Datahub.io Core Data: https://github.com/datasets: a Github organization that hosts many dataset repos that follow a spec
+- https://github.com/datasets/awesome-data: a collection of Markdown files by topic that describe a curated list of possible data sources. No data is hosted on this repo
 - https://github.com/vega/vega-datasets
 - https://github.com/altair-viz/vega_datasets
 - https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html
 - https://github.com/vincentarelbundock/Rdatasets
+- R `datasets` package: https://stat.ethz.ch/R-manual/R-patched/library/datasets/html/00Index.html

@@ -1,0 +1,19 @@
+# for each entry in :files:, and this includes samples/variations
+
+- path: sample.csv  # relative to data package subdir
+
+  description: |
+    some description
+
+  links:
+    - type: googlesheet
+      url: https://googlesheet.com/123123
+    - title: See it on Airtable
+      url: https://airtable
+
+
+  wrangling:
+    description: |
+      whateverdude lorem ipsum
+    cmd: |
+      cat data.csv something something

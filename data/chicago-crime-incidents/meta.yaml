@@ -1,6 +1,6 @@
-slug: chicago-crime-incidents
+id: chicago-crime-incidents
 title: Chicago Reported Crime Incidents
-updated_at: YYYY-MM-DD
+updated_at: 2020-11-24
 
 description: |
   This dataset includes reported incidents of crime (with the exception of murders where data exists for each victim) that occurred in the City of Chicago, in the months of August, September, and October, for the years 2018, 2019, and 2020.
@@ -9,20 +9,21 @@ files:
   - path: orignal.csv
     default: true
 
-  - path: guns.csv
-    description: |
-      Just the incidents in which the Description field mentions 'GUN'
-    wrangle_script: |
-        cat original.csv \
-          | csvgrep -c Description -m 'GUN' \
-          > guns.csv
-
-
-  - path: sample
+  - path: sample.csv
     description: |
       Just a random sample of 100 recrds
     wrangle_script: |
       xsv sample 100 original.csv > sample.csv
+
+variations:
+  - path: guns.csv
+    description: |
+      Just the incidents in which the Description field mentions 'GUN'
+    wrangling:
+        cmd: |
+          cat original.csv \
+            | csvgrep -c Description -m 'GUN' \
+            > guns.csv
 
 
 license: Public domain
@@ -32,8 +33,10 @@ publisher:
 
 
 sources:
-  homepage: https://data.cityofchicago.org/Public-Safety/Chicago-Crime-Incidents-for-August-Sept-October-fo/bj9v-kgue
-  download: https://data.cityofchicago.org/api/views/bj9v-kgue/rows.csv?accessType=DOWNLOAD
+  homepage:
+    url: https://data.cityofchicago.org/Public-Safety/Chicago-Crime-Incidents-for-August-Sept-October-fo/bj9v-kgue
+  download:
+    url: https://data.cityofchicago.org/api/views/bj9v-kgue/rows.csv?accessType=DOWNLOAD
 
 
 # `references` is where we list any other links germane to understanding the data
