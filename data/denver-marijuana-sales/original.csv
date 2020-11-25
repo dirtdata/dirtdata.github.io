@@ -1,0 +1,624 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Denver Open Data Catalog: Marijuana Gross Sales</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/CCD.Bootstrap/3.2.10/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/CCD.FontAwesome/4.2.1/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/CCD.PublicAppSkin/1.1.12/css/publicappskin.min.css" />
+    <script type="text/javascript" src="https://www.denvergov.org/static/typekit/20150630.001/tkloader.js"></script>
+
+    <style>
+        body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p, .ask, .footer-copy h5, .denver-navbar-nav > li > a, .denver, .footer-copy, .denver-navbar .navbar-text , .denver-login-nav > li > a{
+            font-family:'proxima-nova', Arial, Helvetica, sans-serif;
+        }
+        .denver-navbar .navbar-collapse {
+            margin-top:0;
+        }
+        .denver-navbar-nav > li > a {
+            display:table-cell;
+            vertical-align:middle;
+            height:65px;
+        }
+        div.denver-global-nav-controls {
+    display: table;
+    height: 65px;
+    margin: 0;
+    padding: 0;
+}
+        .denver-nav-search {
+            display:table-cell;
+            vertical-align:middle;
+        }
+        .social-icons a {
+            text-align:center;
+        }
+        .denver {
+            font-size:16px;
+        }
+    </style>
+
+    
+</head>
+<body>
+
+    
+    <div class="wrapper">
+        <!--Start header-->
+        <header class="container-fluid">
+            <nav class="navbar navbar-inverse navbar-fixed-top denver-navbar" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+                            <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+                            <span class="icon-bar"></span> <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand denver-navbar-brand" href="//www.denvergov.org">
+                            <div class="denverLogo" id="logo"></div>
+                            <div class="logo-spacer hidden-xs hidden-sm hidden-md"></div>
+                        </a>
+                       <!-- <p class="navbar-text pull-right hidden-lg hidden-md">
+                            <a href="https://www.denvergov.org/Apps4/Identity/Login.aspx?REF=https://www.denvergov.org">
+                                <i class="fa fa-user fa-lg" title="Login or Register"></i>
+                                <span class="hidden-xs hidden-sm">Login or Register</span>
+                            </a>
+                        </p>-->
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav denver-navbar-nav">
+                            <li>
+                                <a href="//www.denvergov.org/content/denvergov/en/city-of-denver-home/neighborhood-services.html">Neighborhood</a>
+                            </li>
+                            <li>
+                                <a href="//www.denvergov.org/content/denvergov/en/city-of-denver-home/business-services.html">Business</a>
+                            </li>
+                            <li>
+                                <a href="http://www.denver.org/" target="_blank">Visiting</a>
+                            </li>
+                            <li>
+                                <a href="//www.denvergov.org/content/denvergov/en/city-of-denver-home/government.html">Government</a>
+                            </li>
+                            <li>
+                                <a href="//www.denvergov.org/content/denvergov/en/city-of-denver-home/online-services-center.html">Online Services</a>
+                            </li>
+                            <li>
+                                <a href="//www.denvergov.org/content/denvergov/en/city-of-denver-home/a-to-z-departments-and-services.html">A to Z</a>
+                            </li>
+                        </ul>
+                        <div class="denver-global-nav-controls navbar-right">
+
+                          
+
+
+
+                            <!-- SEARCH COMPONENT START - 1 of 4 places -->
+                            <form id="denvergov-search" class="denver-nav-search hidden-sm hidden-xs" action="https://www.denvergov.org/content/denvergov/en/city-of-denver-home/search-results.html">
+
+
+
+
+
+
+                                <input type="text" placeholder="Search" name="q" style="border: 0 none;color: #58595b;font-size: 14px;height: 2em;line-height: 24px;padding: 0 22px 0 10px;width: 10em;">
+
+
+                                <i onclick="document.getElementById('denvergov-search').submit();" class="fa fa-search" style=" color: #808284; cursor: pointer; left: -24px; position: relative;"></i>
+
+                            </form>
+
+                            <!-- SEARCH COMPONENT END -->
+
+                            <button data-target=".dropdown-nav" data-toggle="collapse" title="Toggle navigation" class="denver-nav-icon navbar-toggle" type="button">
+                                <span class="sr-only">Toggle navigation</span>
+                                <i class="fa fa-navicon fa-2x"></i>
+                            </button>
+
+                            <!-- SEARCH COMPONENT START - 2 of 4 -->
+                            <button data-target=".denver-body-search" data-toggle="collapse" class="denver-search-icon hidden-lg hidden-md navbar-toggle" type="button">
+                                <i class="fa fa-search fa-2x"></i>
+                            </button>
+                            <!-- SEARCH COMPONENT END -->
+
+                        </div>
+                       <!-- <p class="navbar-text pull-right hidden-md hidden-sm hidden-xs">
+                            <a href="https://www.denvergov.org/Apps4/Identity/Login.aspx?REF=https://www.denvergov.org"><i class="fa fa-user fa-lg" title="Login or Register"></i>Login or Register</a>
+                        </p>-->
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+                <div class="container-fluid denver-app-header">
+                    <div class="container">
+                        <div class="denver-app-header ">
+                            <span></span><h3>Open Data Catalog</h3>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!--End header-->
+        </header>
+
+
+        <section class="container">
+            
+
+
+
+<div class="package">
+    <div class="col-md-8">
+        
+    <div class="breadcrumbs">
+            <span class="breadcrumb">
+<a href="/opendata/">Home</a>            </span>
+            <span class="breadcrumb">
+                     >
+                    <span>Marijuana Gross Sales</span>
+            </span>
+    </div><br />
+
+    
+
+
+
+
+
+<!-- JavaScript dependencies -->
+
+<script src="/opendata/Scripts/jquery-1.7.1.min.js"></script>
+<script src="/opendata/Scripts/jquery.watermark.min.js"></script>
+<script src="/opendata/Scripts/jquery-ui-1.8.16.custom.min.js"></script>
+<script src="/opendata/Scripts/stars/jquery.ui.stars.min.js"></script>
+<script src="/opendata/Scripts/tiptip/jquery.tipTip.min.js"></script>
+<script src="/opendata/Scripts/datatables/jquery.dataTables.min.js"></script>
+
+<!-- CSS dependencies -->
+<link href="/opendata/Content/smoothness/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+<link href="/opendata/Content/Styles.css" rel="stylesheet" type="text/css" />
+<link href="/opendata/Scripts/stars/jquery.ui.stars.min.css" rel="stylesheet" type="text/css" />
+<link href="/opendata/Scripts/tiptip/tipTip.css" rel="stylesheet" type="text/css" />
+<link href="/opendata/Scripts/datatables/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+
+<!-- Theme resources -->
+<link href="/opendata/Content/Theme/Denver/Styles.css" rel="stylesheet" type="text/css" />
+
+<!-- Enable tipTip tooltips -->
+<script language="javascript">
+    $(function () {
+        $(".tooltip").tipTip({
+            defaultPosition: "top",
+            delay: 200
+        });
+    });
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src='https://www.googletagmanager.com/gtag/js?id=UA-1920922-10'></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-1920922-10');
+</script>
+
+
+
+<form action="/opendata/search" class="search-form" method="get">
+    <div class="input-group search col-md-8">
+        <label class="hidden" for="open-data-search">Open Data Search</label>
+        <input name="q" type="text" tabindex="1" class="search-input form-control" value="" id="open-data-search"/>
+        <span class="input-group-btn">
+            <input type="submit" class="btn btn-info search-submit" value="Search" />
+        </span>
+            </div>
+</form>
+<script language="javascript">
+    
+        var $input = $('.search-input');
+
+        $input.watermark('Search...');
+
+        $input.focus(function() {
+            $(this).select();
+        });
+
+        
+        var suggestUrl = '/opendata/suggest/_'.slice(0, -1);
+        var delay = 150;
+        $input.autocomplete({
+            
+            source: function (request, response) {
+                $.getJSON(suggestUrl + request.term, null, function (json) {
+                    response(json);
+                });
+            },
+            select: function (event, ui) {
+                if (ui.item) {
+                    $input.val(ui.item.value);
+                }
+                $('.search-form').submit();
+            },
+            delay: delay
+        });
+        
+</script>
+
+<script language="javascript">
+    $('.search-submit').click(function () {
+        var value = $('.search-input').val();
+
+        // Track the search event in analytics
+        _gaq.push([
+            '_trackEvent',
+            'Search',
+            'Query',
+            value]);
+
+    });
+</script>
+
+        <h2 class="package-title">Marijuana Gross Sales</h2>
+        <div class="package-subtitle">
+            <div class="tagline">
+
+                Last updated 11/24/2020
+
+            </div>
+            <a class="package-subscribe tooltip" title="Subscribe" href="http://denweb001p.denverco.gov/dataset/history/city-and-county-of-denver-marijuana-gross-sales?days=14&format=atom" target="_top"> </a>
+
+        </div>
+            <div class="notes">
+                <p><p>The Marijuana Gross Sales reports are currently available <a href="https://app.powerbigov.us/view?r=eyJrIjoiMWYyNzg4ODctNjBiNC00MmE4LWJmMjAtOGUzMzdkODY2YTQ1IiwidCI6IjM5Yzg3YWIzLTY2MTItNDJjMC05NjIwLWE2OTZkMTJkZjgwMyJ9">here</a>. Please contact <a href="mailto:MarijuanaInfo@denvergov.org">MarijuanaInfo@denvergov.org</a> with any questions you have.</p></p>
+            </div>
+
+
+        
+
+
+
+
+    <meta name="description" content="The Marijuana Gross Sales reports are currently available here. Please contact MarijuanaInfo@denvergov.org with any questions you have." />
+    <meta name="keywords" content="denver,colorado,city and county of denver,city,county,data catalog,open data,gross sales,marijuana gross sales,marijuana sales" />
+
+
+<!-- JavaScript dependencies -->
+
+<script src="/opendata/Scripts/jquery-1.7.1.min.js"></script>
+<script src="/opendata/Scripts/jquery.watermark.min.js"></script>
+<script src="/opendata/Scripts/jquery-ui-1.8.16.custom.min.js"></script>
+<script src="/opendata/Scripts/stars/jquery.ui.stars.min.js"></script>
+<script src="/opendata/Scripts/tiptip/jquery.tipTip.min.js"></script>
+<script src="/opendata/Scripts/datatables/jquery.dataTables.min.js"></script>
+
+<!-- CSS dependencies -->
+<link href="/opendata/Content/smoothness/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+<link href="/opendata/Content/Styles.css" rel="stylesheet" type="text/css" />
+<link href="/opendata/Scripts/stars/jquery.ui.stars.min.css" rel="stylesheet" type="text/css" />
+<link href="/opendata/Scripts/tiptip/tipTip.css" rel="stylesheet" type="text/css" />
+<link href="/opendata/Scripts/datatables/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+
+<!-- Theme resources -->
+<link href="/opendata/Content/Theme/Denver/Styles.css" rel="stylesheet" type="text/css" />
+
+<!-- Enable tipTip tooltips -->
+<script language="javascript">
+    $(function () {
+        $(".tooltip").tipTip({
+            defaultPosition: "top",
+            delay: 200
+        });
+    });
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src='https://www.googletagmanager.com/gtag/js?id=UA-1920922-10'></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-1920922-10');
+</script>
+
+
+
+
+<div class="package">
+
+    
+        <div class="container" style="padding:0">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="container-title">Resources</h2>
+                    <table class="table" cellpadding="0" cellspacing="0">
+                        <thead>
+                            <tr class="row">
+                                <th>Description</th>
+                                <th>Format</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="row">
+
+                            <td>
+Marijuana Gross Sales - Comma-Separated Values                            </td>
+                            <td>
+                        <span class="format" style="color:black;" title="Comma-Separated Values (text)">csv</span>
+
+                            </td>
+                            <td nowrap="nowrap">
+
+                        <a href="https://www.denvergov.org/media/gis/DataCatalog/marijuana_gross_sales/csv/marijuana_gross_sales.csv" class="package-action"
+                           data-format="csv"
+                           data-package="city-and-county-of-denver-marijuana-gross-sales"
+                           data-resource="Marijuana Gross Sales - Comma-Separated Values"
+                           data-action="Download"
+                           target="_blank">Download</a>
+                            </td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <div class="">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="container-title">Details</h2>
+                <table class="table" cellpadding="0" cellspacing="0">
+                    <tbody>
+
+                            <tr class="row">
+                                <th>
+                                    Author
+                                </th>
+                                <td>
+                                    City and County of Denver Office of Marijuana Policy
+                                </td>
+                            </tr>
+
+                            <tr class="row">
+                                <th>
+                                    Author Email
+                                </th>
+                                <td>
+                                    <a href="mailto:marijuanainfo@denvergov.org">marijuanainfo@denvergov.org</a>
+                                </td>
+                            </tr>
+
+
+
+                            <tr class="row">
+                                <th>
+                                    Maintainer Email
+                                </th>
+                                <td>
+                                    <a href="mailto:marijuanainfo@denvergov.org">marijuanainfo@denvergov.org</a>
+                                </td>
+                            </tr>
+                                                    <tr class="row">
+                                <th>
+                                    Version
+                                </th>
+                                <td>
+                                    1.0.647
+                                </td>
+                            </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script language="javascript">
+    // Track click events on resources
+    $("a.package-action").click(function () {
+        var format = $(this).attr('data-format');
+        var package = $(this).attr('data-package');
+        var url = $(this).attr('href');
+        var resource = $(this).attr('data-resource');
+
+        gtag('event', 'download', {
+            'event_category': 'download',
+            'event_label': package,
+            'value': resource
+        })
+    });
+</script>
+
+
+    </div>
+</div>
+
+<div class="col-md-offset-1 col-md-3">
+
+    <div class="row" style="margin-bottom:1em">
+        <span class="badge" style="font-size:2em; vertical-align:middle; color:#005596">260</span>
+        <span style="vertical-align:middle;">total datasets | <a href='/opendata/search'> view all </a></span>
+    </div>
+
+        <div class="row">
+    
+    <script language="javascript">
+        $('.application-thumbnail').click(function () {
+            var package = $(this).attr('data-package');
+            var url = $(this).attr('href');
+            _gaq.push([
+                '_trackEvent',
+                'Package:' + package,
+                'Related:' + url]);
+        });
+    </script>
+
+
+            </div>
+    <div class="row">
+        
+<div class="panel panel-info">
+
+    <div class="panel-heading">
+        <h2>Tags</h2>
+    </div>
+    <div class="panel-body">
+        <div class="container-content">
+                <div class="tag">
+                    <a href="/opendata/search?tag=gross%20sales" data-tag="gross sales">gross sales</a>
+                </div>
+                <div class="tag">
+                    <a href="/opendata/search?tag=marijuana%20gross%20sales" data-tag="marijuana gross sales">marijuana gross sales</a>
+                </div>
+                <div class="tag">
+                    <a href="/opendata/search?tag=marijuana%20sales" data-tag="marijuana sales">marijuana sales</a>
+                </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+            <div class="row">
+                    <div class="panel panel-info">
+    <div class="panel-heading">
+        <h2 class="">Open Data License</h2>
+    </div>
+    <div class="panel-body">
+        <div class="container-content">
+            <p>
+                You are free to copy, distribute, transmit and adapt the data
+                in this catalog under an open license.
+            </p>
+            <p>
+                For details, please
+                review the <a href="/opendata/termsofuse">terms of use</a>.
+            </p>
+        </div>
+    </div>
+</div>
+            </div>
+                    <div class="row">
+                        
+                    </div>
+                </div>
+
+        </section>
+
+        <div class="push"></div>
+        </div>
+    <!--Start footer-->
+    <footer class="denver-footer">
+        <div class="container">
+            <div class="row" style="background-color:#005596;">
+                <div class="col-xs-7 col-sm-9">
+                    <ul class="social-icons center-block">
+                        <li>
+                            <a class="facebook" href="http://www.facebook.com/CityandCountyofDenver" target="_blank" alt="Facebook" title="Facebook">
+                                <i class="fa fa-facebook" aria-hidden="true">
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="youtube" href="https://www.youtube.com/CityandCountyDenver" target="_blank" alt="Youtube" title="Youtube">
+                                <i class="fa fa-youtube" aria-hidden="true">
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="flickr" href="https://www.flickr.com/photos/80202894@N07/" target="_blank" alt="Flickr" title="Flickr">
+                                <i class="fa fa-flickr" aria-hidden="true">
+                                </i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-5 col-sm-3 text-center ask-denver">
+                    <a href="//www.denvergov.org/pocketgov">
+                        <div class="ask-denver-logo center-block">
+                            <span class="ask" style="font-weight:normal;">
+                                pocketgov
+                            </span>
+                            <span class="denver" style="font-weight:bold;">
+                                denver
+                            </span>
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy text-center">
+            <div class="container">
+                <div class="row">
+                    <article class="col-xs-4 col-sm-4 col-md-4 text-center footer-content">
+                        <a href="//www.denvergov.org/content/denvergov/en/city-of-denver-home/online-services-center.html" title="ONLINE SERVICES">
+                            <h5>
+                                <span class="appIcon tools" title="Apps icon"></span>
+                                ONLINE SERVICES
+                            </h5>
+                        </a>
+                    </article>
+                    <article class="col-xs-4 col-sm-4 col-md-4 text-center footer-content">
+                        <a href="http://data.denvergov.org" target="_blank" title="OPEN DATA">
+                            <h5>
+                                <span class="appIcon openData" title="Open Data icon"></span>
+                                OPEN DATA
+                            </h5>
+                        </a>
+                    </article>
+                    <article class="col-xs-4 col-sm-4 col-md-4 text-center footer-content">
+                        <a href="//www.denvergov.org/content/denvergov/en/city-of-denver-home/a-to-z-departments-and-services.html" title="A - Z SERVICES">
+                            <h5>
+                                <span class="appIcon azServices" title="A to Z icon"></span>
+                                A - Z SERVICES
+                            </h5>
+                        </a>
+                    </article>
+                </div>
+                <div class="row">
+                    <div class="footer-copyright">
+                        <p>
+                            &#169; Copyright 2015 City and County of Denver
+
+
+                            | <a href="https://www.governmentjobs.com/careers/denver" target="_blank">Jobs</a>
+
+
+
+                            | <a href="/content/denvergov/en/city-of-denver-home/terms-of-use.html">Terms of Use</a>
+
+
+
+                            | <a href="/content/denvergov/en/city-of-denver-home/privacy-policy.html">Privacy & Security Policy</a>
+
+
+
+                            | <a href="/content/denvergov/en/city-of-denver-home/cora.html">Open Records Policy (CORA)</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End footer-->
+
+
+    
+
+
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-1920922-11', 'auto');
+              ga('send', 'pageview');
+        </script>
+
+</body>
+</html>

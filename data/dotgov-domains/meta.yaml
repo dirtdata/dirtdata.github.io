@@ -1,0 +1,19 @@
+
+
+https://github.com/GSA/data/tree/master/dotgov-domains
+
+
+sources:
+  landing_page:
+    url: https://github.com/GSA/data/tree/master/dotgov-domains
+  download:
+    url: https://raw.githubusercontent.com/GSA/data/master/dotgov-domains/current-full.csv
+
+publisher:
+  name: General Services Administration
+  url: https://gsa.gov
+
+docs:
+  - title: .gov domains README.md
+    url: https://raw.githubusercontent.com/GSA/data/master/dotgov-domains/README.md
+    path: gov-domains-readme.md

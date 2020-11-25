@@ -1,13 +1,19 @@
 id: chicago-crime-incidents
 title: Chicago Reported Crime Incidents
 updated_at: 2020-11-24
+status:
+  notes:
+    - screwed up the files/canon thing
 
 description: |
   This dataset includes reported incidents of crime (with the exception of murders where data exists for each victim) that occurred in the City of Chicago, in the months of August, September, and October, for the years 2018, 2019, and 2020.
 
 files:
-  - path: orignal.csv
-    default: true
+  canon:
+    original:
+      - path: original.csv
+
+
 
   - path: sample.csv
     description: |

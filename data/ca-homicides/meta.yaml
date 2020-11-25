@@ -1,0 +1,48 @@
+# meta.yaml TEMPLATE
+
+id: ca-homicides
+title: California Homicides
+updated_at: 2020-11-25
+version: 1.0
+status:
+  type: just collected
+  notes:
+    - need to verify whether justifiable/manslaughter data is part of main homicide file
+
+description: |
+  copy TK verbatim: Information on homicides in California are reported by various LEAs as part of the reporting requirements for the Federal Uniform Crime Reporting (UCR) Program. These data provide detailed information about the circumstances of each homicide in addition to personal characteristics of the victim.
+
+
+datastash: # TK in lieu of better name for datastash
+  main:
+    path: main.csv
+    url: https://data-openjustice.doj.ca.gov/sites/default/files/dataset/2020-07/Homicide%20_Actuals_1987-2019.csv
+
+  extra:
+    - title: Justifiable Homicides
+      path: justifiable.csv
+      url: https://data-openjustice.doj.ca.gov/sites/default/files/dataset/2020-07/Homicide_Justifiable_1987-2019.csv
+
+    - title: Manslaughter
+      path: manslaughter.csv
+      url: https://data-openjustice.doj.ca.gov/sites/default/files/dataset/2020-07/Homicide_Manslaughter_1987-2019.csv
+
+
+license:
+  name: Public domain # e.g. CC0 1.0 Universal
+
+publisher:
+  name: California Department of Justice #.e.g. The @unitedstates project
+  project: OpenJustice
+  url: https://openjustice.doj.ca.gov/resources/about-openjustice
+
+sources:
+  landing_page:
+    url: https://openjustice.doj.ca.gov/data
+
+
+
+docs:
+  - title: DOJ CJSC Homicide File Context (Data Set Overview and History)
+    url: https://data-openjustice.doj.ca.gov/sites/default/files/dataset/2020-07/Homicide%20Context_062419.pdf
+    path: homicide-file-readme.pdf

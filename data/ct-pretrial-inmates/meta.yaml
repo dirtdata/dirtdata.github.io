@@ -1,0 +1,54 @@
+
+
+description: |
+  A listing, updated nightly, of individuals being held in Department of Correction facilities while awaiting trial. This data is appended on nightly basis reflecting the individual inmates being held in correctional facilities each day beginning July 1, 2016.
+
+status:
+  notes:
+    - just downloaded mega file
+    - 500MB
+    - csvgrep -c 3 -r '2018|2019|2017' alldata.csv > excerpt.csv
+    - lets filter by facility
+    - filter out low bonds
+      - xsv search '\b\d{3}\b'  -s 7 alldata.csv | xsv count # 41289
+      - xsv search '\b\d{1,4}\b'  -s 7 alldata.csv > lowbonds.csv (40MB)
+
+sources:
+  landing_page:
+    url: https://data.ct.gov/Public-Safety/Accused-Pre-Trial-Inmates-in-Correctional-Faciliti/b674-jy6w
+
+  download:
+    url:
+
+
+publisher:
+  name: Connnecticut State Department of Correction
+  url: http://www.ct.gov/doc
+  authors:
+    - name: Mary Lansing
+
+
+schema:
+
+  rawtext: |
+
+    Field Descriptions:
+
+    DOWNLOAD DATE: Date in which the data were extracted and reflecting the population for that day.
+
+    IDENITIFIER: Individual Inmate Identifier
+
+    LATEST ADMISSION DATE: Most recent date in which the inmate has been admitted. In some instances, this may reflect an original date of admission to a correctional facility. Generally, if a date is more than one year old, an inmate should not be considered to have been held for the entire duration of that time.
+
+    RACE: Race of inmate
+
+    AGE: Age of inmate
+
+    BOND AMOUNT: Amount of bond for which the inmate is being held. In some instances, for particularly low (less than $100), this bond amount may be considered a place holder value
+
+    OFFENSE: Controlling offense for which the bond amount has been set.
+
+    FACILITY: Department of Correction facility where the inmate is currently held.
+
+    DETAINER: Denotes whether inmate is being held at the request of another criminal justice agency, or if another agency is to be notified upon release.
+    Less

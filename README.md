@@ -12,6 +12,9 @@ Real world data files for examples, i.e. yet another repo where I stash datasets
 - Detailed metadata that describes the provenance of each dataset
 - Multiple formats and samples and variations
 
+This repo is mostly focused on data storing and example documentation, and to be used by other repos.
+
+
 ## TK description stuff
 
 ### How things are organized (TK)
@@ -63,3 +66,5 @@ This repo takes inspiration and ideas from:
 - https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html
 - https://github.com/vincentarelbundock/Rdatasets
 - R `datasets` package: https://stat.ethz.ch/R-manual/R-patched/library/datasets/html/00Index.html
+- https://github.com/curran/data
+https://github.com/awesomedata/awesome-public-datasets

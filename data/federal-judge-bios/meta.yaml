@@ -1,0 +1,51 @@
+title: Biographical Directory of Article III Federal Judges
+
+description: |
+  (TK verbatim) The directory includes the biographies of judges presidentially appointed to serve during good behavior since 1789 on the U.S. district courts, U.S. courts of appeals, Supreme Court of the United States, and U.S. Court of International Trade, as well as the former U.S. circuit courts, Court of Claims, U.S. Customs Court, and U.S. Court of Customs and Patent Appeals. Also included are judges who received presidential recess appointments to the above named courts but were not confirmed by the Senate to serve during good behavior.
+
+stash/files/endpoints:
+  main:
+    path: main.csv
+    description: |
+      a flat csv file. just great for melting/cutting
+  # sample:
+  #   path: sample.csv
+
+
+variations:
+  - title: "Export organized by category (Excel workbook)"
+    url: https://www.fjc.gov/sites/default/files/history/categories.xlsx
+    description: |
+      This Excel file has all the tables in separate tabs. Good practice for in2csv.
+    path: categories.xlsx
+
+  - title: Federal Judicial Service table
+    url: https://www.fjc.gov/sites/default/files/history/federal-judicial-service.csv
+    path: federal-judicial-service.csv
+
+  - title: Demographics table
+    url: https://www.fjc.gov/sites/default/files/history/demographics.csv
+    path: demographics.csv
+
+  - title: Education table
+    url: https://www.fjc.gov/sites/default/files/history/education.csv
+    path: education.csv
+
+sources:
+  landing_page:
+    url: https://www.fjc.gov/history/judges/biographical-directory-article-iii-federal-judges-export
+  download:
+    url: https://www.fjc.gov/sites/default/files/history/judges.csv
+    title: "Export organized by judge (CSV file)"
+
+links:
+  - title: "Biographical Directory of Article III Federal Judges, 1789-present"
+    url: https://www.fjc.gov/history/judges
+
+docs:
+  - path: about-judges-directory.pdf
+    title: "Biographical Directory of Article III Federal Judges: About the Directory"
+    url: https://www.fjc.gov/history/judges/biographical-directory-article-iii-federal-judges-about-directory
+    notes: |
+      file was saved as PDF manually
+    automate: false
