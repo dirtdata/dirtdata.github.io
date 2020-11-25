@@ -85,7 +85,6 @@ sources:
     # }]
 
 
-# `references` is where we list any other links germane to understanding the data
-links:
-  - title: Data dictionary
-    url: https://github.com/unitedstates/congress-legislators#data-dictionary
+links: []
+  # - title: Data dictionary
+  #   url: https://github.com/unitedstates/congress-legislators#data-dictionary

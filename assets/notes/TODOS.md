@@ -3,16 +3,28 @@
 ## priority
 
 - work on meta.yaml format
-    - [x] move original.csv to main.csv in all repos
-
+    -   call `downloads` the `collection`?
+    - change `status.notes` to `status` and `notes`
     - ca-homicides has ad-hoc edits that need to be added to the template
     - all older projects need to be fixed
-    - datastash needs a name
-- write a DataPackage/DataPot class
-- move data/ to pots/?
-    - dirtdata.github.io/p/data-id
+    - get meta.yaml into minimal viable form
+    - [x] move original.csv to main.csv in all repos
+    - [x] datastash needs a name (it's now `downloads`)
 
-## overall
+- hack together index.html-making script
+    - simple one pager with a data table
+    - no need to implement publish.json yet
+    - minimal fields:
+        - title
+        - main url
+        - description
+        - source landing page
+        - publisher
+        - hack row/column counter
+
+- write a DataPackage/DataPot class
+
+## renaming stuff
 
 - data/ be renamed d/ or x/?
     - allows us to put default dataset file path as data.csv
@@ -21,17 +33,15 @@
 **meta.yaml schema**
 
 (main stuff)
-- slug is now id
-    - [x] change it in existing yaml
-    - [ ] change it in docs
-- datastash
+- move sources.landing_page to a top level attribute
+- datastash/downloads
     - the object that contains collected files that were downloaded and are now made available
     - need a name: files, stash, catalog, resources
     - has main attribute for main/default file
     - has other: object
     - has samples: object
 
-- references should be links
+- [x] references should be links
 
 - [...] `files` (didn't get to it last night)
     - should be like `sources`, with canonical keys like:

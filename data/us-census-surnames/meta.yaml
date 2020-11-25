@@ -11,18 +11,14 @@ description: |
 status:
   notes:
     - no idea what to do with main.xlsx, e.g. how to expose it to public user
+    - downloads/main needs to refer to scripts/collect.py
 
-files:
-  - path: orignal.csv
-    default: true
-  # - path: original.json
+downloads:
+  main:
+    path: main.csv
+    tempurl: https://www2.census.gov/topics/genealogy/2010surnames/names.zip
 
-  # - path: sample.csv
-  #   description: |
-  #     Why_does_this_sample_exist and what_is_in_it
-  #   wrangle_script: |
-  #     # just a way to record the code used to create the sample, just in case I need to repeate it
-  #     cat original.csv | /path/to/script.that.wrangled  > sample.csv
+
 
 docs:
   - path: surnames.pdf
@@ -30,8 +26,7 @@ docs:
     url: https://www2.census.gov/topics/genealogy/2010surnames/surnames.pdf
 
 license:
-  name: name_of_license # e.g. CC0 1.0 Universal
-  url: license_url
+  name: Public domain
 
 publisher:
   name: U.S. Census
@@ -41,22 +36,6 @@ sources:
   landing_page:
     url: https://www.census.gov/topics/population/genealogy/data/2010_surnames.html
 
-  download:
-    url: https://www2.census.gov/topics/genealogy/2010surnames/names.zip
-
-
-
-  # borrowing from frictionless data specs
-  # https://specs.frictionlessdata.io/data-package/#sources
-  # "The raw sources for this data package. It MUST be an array of Source objects. Each Source object MUST have a title and MAY have path and/or email properties. Example:"
-    #   "sources": [{
-    #   "title": "World Bank and OECD",
-    #   "path": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
-    # }]
-
-
-# `references` is where we list any other links germane to understanding the data
-# references:
 
 
 links:

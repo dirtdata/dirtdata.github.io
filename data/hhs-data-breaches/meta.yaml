@@ -1,0 +1,72 @@
+
+
+id: DATASET_ID_SLUGGY
+title: Health Data Breach Reports
+updated_at: 2020-11-25
+version: 1.0
+description: |
+  Note TK: our snapshot is from the "Archive" — all cases older than 24 months.
+
+  verbatim: As required by section 13402(e)(4) of the HITECH Act, the Secretary must post a list of breaches of unsecured protected health information affecting 500 or more individuals. The following breaches have been reported to the Secretary:
+
+status:
+  type: new
+  notes:
+    - probably not worth getting the latest reports
+    - no direct link
+    - i think this data is just 500+ people
+    - need a better title
+
+downloads: # TK in lieu of b etter name
+  main:
+    path: main.csv
+    # remote path was: breach_report.csv
+
+  # sample:
+  #   path: sample.csv
+  #   links:
+  #     - title: Google Sheet
+  #       url: http_example_com
+  #   wrangling:
+  #     cmd: |
+  #       cat main.csv | hey > filtered_subset.csv
+
+  # single:
+  #   path: single.csv
+
+  # schema:
+  #   path: schema.csv # optional??
+
+
+#################
+extra_downloads: []
+  # - title: Some kind of data variation
+  #   path: other_variation.csv
+  #   url: http_example_other_variation.csv
+
+  # - title: Filtered data
+  #   path: filtered_subset.csv
+  #   wrangling:
+  #     cmd: |
+  #       cat main.csv | hey > filtered_subset.csv
+
+
+
+license:
+  name: Public domain # e.g. CC0 1.0 Universal
+  url: license_url
+
+publisher:
+  name: U.S. Department of Health and Human Services Office for Civil Rights
+  url: https://www.hhs.gov/ocr/index.html
+
+
+sources:
+  landing_page:
+    url: https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf
+
+
+
+links:
+  - title: Submitting Notice of a Breach to the Secretary
+    url: https://www.hhs.gov/hipaa/for-professionals/breach-notification/breach-reporting/index.html

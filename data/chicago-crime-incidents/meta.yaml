@@ -45,4 +45,4 @@ sources:
     url: https://data.cityofchicago.org/api/views/bj9v-kgue/rows.csv?accessType=DOWNLOAD
 
 
-# `references` is where we list any other links germane to understanding the data
+links: []

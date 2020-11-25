@@ -67,22 +67,6 @@ sources:
   landing_page:
     url: https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbying-Activity/pahz-egmi
 
-
-  # original_source:
-  #   url: ORIGINAL
-
-
-
-  # borrowing from frictionless data specs
-  # https://specs.frictionlessdata.io/data-package/#sources
-  # "The raw sources for this data package. It MUST be an array of Source objects. Each Source object MUST have a title and MAY have path and/or email properties. Example:"
-    #   "sources": [{
-    #   "title": "World Bank and OECD",
-    #   "path": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
-    # }]
-
-
-# `references` is where we list any other links germane to understanding the data
 links:
   - title: "Chicago Board of Ethics: Lobbyists"
     url: https://www.chicago.gov/city/en/depts/ethics/provdrs/lobby.html

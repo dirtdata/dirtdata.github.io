@@ -28,12 +28,16 @@ TODOs of finding and collecting them
     - newer https://data.vermont.gov/dataset/Public-Records-Requests/476u-uxxa
         - just 11 cols and 9000 rows
 
+- [o] HHS data breaches
+    - https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf 
+
 - [o] NHTSA 
     - landing: http://www-odi.nhtsa.dot.gov/downloads/index.cfm
     - defects investigations
         - needs to be pruned
     - recalls
         - needs to be pruned
+
 
 ## maybe
 
@@ -51,6 +55,7 @@ TODOs of finding and collecting them
 - covid-19 us deaths: 
     - https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_US.csv
     - https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series
+
 
 ## no for now
 
