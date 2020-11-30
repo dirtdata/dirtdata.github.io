@@ -9,13 +9,14 @@ description: |
 
 status: new
 notes:
+  - 2019 is the main.csv
   - downloaded 2018 and 2017 for safekeeping, since dataset updates every 3 years
 
 downloads: # TK in lieu of b etter name
   main:
     path: main.csv
     url: https://data.cityofnewyork.us/api/views/8we4-p22f/rows.csv?accessType=DOWNLOAD
-
+    landing_page: https://data.cityofnewyork.us/Health/2019-New-York-City-Restaurant-Inspection-Results/8we4-p22f
   # sample:
   #   path: sample.csv
   #   links:
@@ -51,7 +52,7 @@ docs:
 
   - title: Data dictionary
     url: https://data.cityofnewyork.us/api/views/8we4-p22f/files/ec33d2c8-81f5-499a-a238-0213a38239cd?download=true&filename=RestaurantInspectionDataDictionary_09242018.xlsx
-    path: restaurant-inspection-data-dictionary.xlsx
+    path: nyc-restaurant-inspections-data-dictionary.xlsx
   # - title: Some kind of data variation
   #   path: other_variation.csv
   #   url: http_example_other_variation.csv
