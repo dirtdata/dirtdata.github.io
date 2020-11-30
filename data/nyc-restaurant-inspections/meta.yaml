@@ -1,0 +1,104 @@
+
+
+id: nyc-restaurant-inspections
+title: NYC Restaurant Inspections
+updated_at: 2020-11-30
+version: 1.0
+description: |
+  tk verbatim: The dataset contains every sustained or not yet adjudicated violation citation from every full or special program inspection conducted up to three years prior to the most recent inspection for restaurants and college cafeterias in an active status on the RECORD DATE (date of the data pull). When an inspection results in more than one violation, values for associated fields are repeated for each additional violation record. Establishments are uniquely identified by their CAMIS (record ID) number. Keep in mind that thousands of restaurants start business and go out of business every year; only restaurants in an active status are included in the dataset.
+
+status: new
+notes:
+  - downloaded 2018 and 2017 for safekeeping, since dataset updates every 3 years
+
+downloads: # TK in lieu of b etter name
+  main:
+    path: main.csv
+    url: https://data.cityofnewyork.us/api/views/8we4-p22f/rows.csv?accessType=DOWNLOAD
+
+  # sample:
+  #   path: sample.csv
+  #   links:
+  #     - title: Google Sheet
+  #       url: http_example_com
+  #   wrangling:
+  #     cmd: |
+  #       cat main.csv | hey > filtered_subset.csv
+
+  # single:
+  #   path: single.csv
+
+  # schema:
+  #   path: schema.csv # optional??
+
+
+extra_downloads:
+  - path: 2017.csv
+    landing_page: https://data.cityofnewyork.us/Health/2017-NYC-Restaurant-Inspection-Results/wmfj-89hg/data
+    url: https://data.cityofnewyork.us/api/views/wmfj-89hg/rows.csv?accessType=DOWNLOAD
+    title: 2017 NYC Restaurant Inspection Results
+  - path: 2018.csv
+    landing_page: https://data.cityofnewyork.us/Health/2018-NYC-Restaurant-Inspection-Results/pj8u-bfwj/data
+    url: https://data.cityofnewyork.us/api/views/pj8u-bfwj/rows.csv?accessType=DOWNLOAD
+    title: 2018 NYC Restaurant Inspection Results
+
+
+docs:
+
+  - title: About NYC Restaurant Inspection Data on NYC OpenData
+    url: https://data.cityofnewyork.us/api/views/8we4-p22f/files/3016a624-55c0-4bd0-bfb4-95c6b9ea6ba4?download=true&filename=About_NYC_Restaurant_Inspection_Data_on_NYC_OpenData_092418.docx
+    path: about-nyc-restaurant-inspection-data.docx
+
+  - title: Data dictionary
+    url: https://data.cityofnewyork.us/api/views/8we4-p22f/files/ec33d2c8-81f5-499a-a238-0213a38239cd?download=true&filename=RestaurantInspectionDataDictionary_09242018.xlsx
+    path: restaurant-inspection-data-dictionary.xlsx
+  # - title: Some kind of data variation
+  #   path: other_variation.csv
+  #   url: http_example_other_variation.csv
+
+  # - title: Filtered data
+  #   path: filtered_subset.csv
+  #   wrangling:
+  #     cmd: |
+  #       cat main.csv | hey > filtered_subset.csv
+
+
+
+license:
+  name: NAME_OF_LICENSE # e.g. CC0 1.0 Universal
+  url: URL_LICENSE
+
+publisher:
+  name: Publisher_Name #.e.g. The @unitedstates project
+  url: https://example.com/publisher/homepage
+
+sources:
+  landing_page:
+    url: https://data.cityofnewyork.us/Health/2019-New-York-City-Restaurant-Inspection-Results/8we4-p22f
+
+
+links:
+  - title: Full version of dataset
+    url: https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j/
+  - title: Data dictionary
+    url: https://github.com/unitedstates/congress-legislators#data-dictionary
+
+
+
+
+############# TKD
+
+
+
+# original_source:
+#   url: ORIGINAL
+
+
+
+# borrowing from frictionless data specs
+# https://specs.frictionlessdata.io/data-package/#sources
+# "The raw sources for this data package. It MUST be an array of Source objects. Each Source object MUST have a title and MAY have path and/or email properties. Example:"
+  #   "sources": [{
+  #   "title": "World Bank and OECD",
+  #   "path": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
+  # }]

@@ -3,6 +3,13 @@
 
 TODOs of finding and collecting them
 
+## existing
+
+- remove us-congress-legislators-current and just have historical be legislators?
+    - data schema is exactly the same
+    - this could be one example in which the main.csv data is not the pure raw data, but a combination of historical and current
+    - add a congressmembers.terms repo, that consists of the flattening of yaml
+
 
 ## in progress
 
@@ -38,6 +45,8 @@ TODOs of finding and collecting them
     - recalls
         - needs to be pruned
 
+- [ ] restaurant inspections
+
 
 ## maybe
 
@@ -49,7 +58,6 @@ TODOs of finding and collecting them
 
 - Congress House expenditures
 - 311 data
-- restaurant inspections
 
 - census housing estimates
 - covid-19 us deaths: 
