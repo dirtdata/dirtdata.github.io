@@ -27,6 +27,9 @@ TODOs of finding and collecting them
     - [o] deaths in custody
 
 - [?] ct pre trial inmates: https://data.ct.gov/Public-Safety/Accused-Pre-Trial-Inmates-in-Correctional-Faciliti/b674-jy6w
+    - made a low bond version: https://data.ct.gov/Public-Safety/Connecticut-Pre-Trial-Inmates-with-less-than-10-00/g2qe-s788/data
+    - have to wait for public approval tho
+    - meanwhile, did manual faceting
 - [o] chicago lobbying https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbying-Activity/pahz-egmi
 
 - [o] vermont public records requests

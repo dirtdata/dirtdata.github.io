@@ -1,23 +1,33 @@
-
-
+id: ct-pretrial-inmates
+title: Connecticut Pre-Trial Inmates with less than $10,000 bond
 description: |
+  tk verbatim
   A listing, updated nightly, of individuals being held in Department of Correction facilities while awaiting trial. This data is appended on nightly basis reflecting the individual inmates being held in correctional facilities each day beginning July 1, 2016.
 
 status:
   notes:
-    - just downloaded mega file
-    - 500MB
-    - csvgrep -c 3 -r '2018|2019|2017' alldata.csv > excerpt.csv
+    - original megafile is 500MB+, in TMPWORK
     - lets filter by facility
-    - filter out low bonds
-      - xsv search '\b\d{3}\b'  -s 7 alldata.csv | xsv count # 41289
-      - xsv search '\b\d{1,4}\b'  -s 7 alldata.csv > lowbonds.csv (40MB)
+    - created low bonds view...have to wait for "public approval"
+    - |
+      in the meantime:
+        xsv search -s 'BOND AMOUNT' '\b\d{1,4}\b' TMPWORK/inmates.csv > main.csv
+    - look for data dictionaries
+    - offense
 
-    - basically, need to make a Socrata filtered view to get from
+downloads:
+  main:
+    path: main.csv
+    url: https://data.ct.gov/api/views/g2qe-s788/rows.csv?accessType=DOWNLOAD
+    landing_page: https://data.ct.gov/Public-Safety/Connecticut-Pre-Trial-Inmates-with-less-than-10-00/g2qe-s788
+
+
+extra_downloads: []
 
 sources:
   landing_page:
     url: https://data.ct.gov/Public-Safety/Accused-Pre-Trial-Inmates-in-Correctional-Faciliti/b674-jy6w
+    title: original data tk
 
 
 publisher:
@@ -25,6 +35,12 @@ publisher:
   url: http://www.ct.gov/doc
   authors:
     - name: Mary Lansing
+
+
+
+
+
+
 
 
 schema:
@@ -50,4 +66,3 @@ schema:
     FACILITY: Department of Correction facility where the inmate is currently held.
 
     DETAINER: Denotes whether inmate is being held at the request of another criminal justice agency, or if another agency is to be notified upon release.
-    Less
