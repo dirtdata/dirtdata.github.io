@@ -50,8 +50,8 @@ extra_downloads: []
 
 
 license:
-  name: NAME_OF_LICENSE # e.g. CC0 1.0 Universal
-  url: URL_LICENSE
+  name: Public domain # e.g. CC0 1.0 Universal
+  url: https://creativecommons.org/publicdomain/zero/1.0/
 
 publisher:
   name: Publisher_Name #.e.g. The @unitedstates project

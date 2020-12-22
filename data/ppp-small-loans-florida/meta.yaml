@@ -1,0 +1,94 @@
+id: ppp-small-loans-florida
+title: Human_readable_headline
+updated_at: 2020-12-22
+version: 1.0
+description: |
+  SBA PPP Loans less than $150,000 to businesses in Florida.
+
+  verbatim: The Paycheck Protection Program is a loan designed to provide a direct incentive for small businesses to keep their workers on the payroll.
+
+  Notice: Paycheck Protection Program closed August 8, 2020
+
+status: new
+notes:
+  - just downloaded data for Florida state
+  - first update in about a month to this repo
+
+
+downloads: #TK
+  main:
+    path: main.csv
+    landing_page: https://sba.box.com/s/xzh5734v6mgfhz9vkh5lahd0qsrc0gdg
+  # sample:
+  #   path: sample.csv
+  #   links:
+  #     - title: Google Sheet
+  #       url: http_example_com
+  #   wrangling:
+  #     cmd: |
+  #       cat main.csv | hey > filtered_subset.csv
+
+  # single:
+  #   path: single.csv
+
+  # schema:
+  #   path: schema.csv # optional??
+
+
+docs:
+  - path: ppp-key-aspects.pdf
+    title: "Paycheck Protection Program (PPP) Loan Data – Key Aspects – Updated August 20, 2020"
+    url: https://www.sba.gov/sites/default/files/2020-08/PPP%20Loan%20Data%20-%20Key%20Aspects%2008212020.pdf
+
+
+extra_downloads: []
+
+  # - title: Some kind of data variation
+  #   path: other_variation.csv
+  #   url: http_example_other_variation.csv
+
+  # - title: Filtered data
+  #   path: filtered_subset.csv
+  #   wrangling:
+  #     cmd: |
+  #       cat main.csv | hey > filtered_subset.csv
+
+
+
+license:
+  name: Public domain # e.g. CC0 1.0 Universal
+  url: https://creativecommons.org/publicdomain/zero/1.0/
+
+publisher:
+  name: U.S. Small Business Administration #.e.g. The @unitedstates project
+  url: https://sba.gov
+
+sources:
+  landing_page:
+    url: ""
+
+
+links:
+  - title: "Paycheck Protection Program Loan Data; Data by State"
+    url: "https://www.sba.gov/funding-programs/loans/coronavirus-relief-options/paycheck-protection-program#section-header-11"
+  - title: "Press release: SBA and Treasury Announce Release of PPP Loan Data"
+    url: https://www.sba.gov/about-sba/sba-newsroom/press-releases-media-advisories/sba-and-treasury-announce-release-ppp-loan-data
+
+
+
+############# TKD
+
+
+
+# original_source:
+#   url: ORIGINAL
+
+
+
+# borrowing from frictionless data specs
+# https://specs.frictionlessdata.io/data-package/#sources
+# "The raw sources for this data package. It MUST be an array of Source objects. Each Source object MUST have a title and MAY have path and/or email properties. Example:"
+  #   "sources": [{
+  #   "title": "World Bank and OECD",
+  #   "path": "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
+  # }]

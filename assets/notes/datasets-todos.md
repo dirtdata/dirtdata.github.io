@@ -54,12 +54,12 @@ TODOs of finding and collecting them
 ## maybe
 
 - leso data
-
+- virginia court case data https://virginiacourtdata.org/
+    - http://www.courts.state.va.us/courts/cib.pdf
 - [ ] pet licenses from muckrock/Charlotte, NC Pet Licensing
     - https://www.muckrock.com/foi/charlotte-161/charlotte-nc-pet-licensing-39645/
     - https://cdn.muckrock.com/foia_files/2017/08/14/CHR_PetOwner_170804.xlsx
 
-- Congress House expenditures
 - 311 data
 
 - census housing estimates
@@ -70,6 +70,7 @@ TODOs of finding and collecting them
 
 ## no for now
 
+- Congress House expenditures: not sure the licensing
 - CA DOJ data
     - arrests
     - crimes and clearances

@@ -7,13 +7,41 @@ description: |
 status:
   notes:
     - original megafile is 500MB+, in TMPWORK
-    - lets filter by facility
     - created low bonds view...have to wait for "public approval"
     - |
-      in the meantime:
+        in the meantime:
         xsv search -s 'BOND AMOUNT' '\b\d{1,4}\b' TMPWORK/inmates.csv > main.csv
     - look for data dictionaries
-    - offense
+    - the dataset includes each day's snapshot, allowing for longitudinal tracking of individual identifiers
+    - |
+        low bonds individuals are relatively few, and also have shorter times in jail
+
+        xsv search -s 'BOND AMOUNT' '\b\d{1,4}\b' TMPWORK/inmates.csv | xsv select 2 | sort | uniq -c | wc -l
+        13199
+
+        xsv search -s 'BOND AMOUNT' '\b\d{1,4}\b' TMPWORK/inmates.csv | wc -l
+        386278
+
+    - |
+      in contrast, high bonds individuals are more numerous and also have more days in jail
+
+      xsv search -s 'BOND AMOUNT' '\b\d{5}\b' TMPWORK/inmates.csv | xsv select 2 | sort | uniq -c | wc -l
+      25600
+
+      xsv search -s 'BOND AMOUNT' '\b\d{5}\b' TMPWORK/inmates.csv | wc -l
+      2049482
+
+      xsv search -s 'BOND AMOUNT' '\b\d{6}\b' TMPWORK/inmates.csv | xsv select 2 | sort | uniq -c | wc -l
+      13622
+      xsv search -s 'BOND AMOUNT' '\b\d{6}\b' TMPWORK/inmates.csv | wc -l
+      2248424
+
+      xsv search -s 'BOND AMOUNT' '\b\d{7}\b' TMPWORK/inmates.csv | xsv select 2 | sort | uniq -c | wc -l
+      881
+
+      xsv search -s 'BOND AMOUNT' '\b\d{7}\b' TMPWORK/inmates.csv | xsv select 2 | wc -l
+      296062
+
 
 downloads:
   main:
