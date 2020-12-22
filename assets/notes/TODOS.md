@@ -2,16 +2,8 @@
 
 ## priority
 
-- work on meta.yaml format
-    -   call `downloads` the `collection`?
-    - change `status.notes` to `status` and `notes`
-    - ca-homicides has ad-hoc edits that need to be added to the template
-    - all older projects need to be fixed
-    - get meta.yaml into minimal viable form
-    - [x] move original.csv to main.csv in all repos
-    - [x] datastash needs a name (it's now `downloads`)
-
-- hack together index.html-making script
+- hack together index.html-making script [2020-12-22]
+    - makeit in jinja
     - simple one pager with a data table
     - no need to implement publish.json yet
     - minimal fields:
@@ -21,6 +13,19 @@
         - source landing page
         - publisher
         - hack row/column counter
+
+
+
+- work on meta.yaml format
+    -   call `downloads` the `collection`?
+    - change `status.notes` to `status` and `notes`
+    - ca-homicides has ad-hoc edits that need to be added to the template
+    - all older projects need to be fixed
+    - get meta.yaml into minimal viable form
+    - [x] move original.csv to main.csv in all repos
+    - [x] datastash needs a name (it's now `downloads`)
+
+
 
 - write a DataPackage/DataPot class
 

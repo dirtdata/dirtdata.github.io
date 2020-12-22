@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Dirt Data file index</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>
+            Dirt Data inventory
+        </h1>
+
+
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <td>Name</td>
+                    <td>Download</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for proj in projects %}
+                <tr class="project">
+                    <td>
+                        <div class="project-title">
+                            {{ proj.title }}
+                        </div>
+                        <div class="project-description">
+                            {{ proj.description }}
+                        </div>
+                    </td>
+                    <td>
+                        <a href="{{proj.main_download_url}}">Download</a>
+                    </td>
+                </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+<footer class="footer mt-auto footer-dark">
+  <div class="container">
+    <ul>
+        <li>Github: <a href="https://github.com/dirtdata/dirtdata.github.io">
+            @dirtdata
+        </a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

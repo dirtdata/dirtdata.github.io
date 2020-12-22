@@ -3,11 +3,9 @@ title: Biographical Directory of Article III Federal Judges
 description: |
   (TK verbatim) The directory includes the biographies of judges presidentially appointed to serve during good behavior since 1789 on the U.S. district courts, U.S. courts of appeals, Supreme Court of the United States, and U.S. Court of International Trade, as well as the former U.S. circuit courts, Court of Claims, U.S. Customs Court, and U.S. Court of Customs and Patent Appeals. Also included are judges who received presidential recess appointments to the above named courts but were not confirmed by the Senate to serve during good behavior.
 
-stash/files/endpoints:
+downloads:
   main:
     path: main.csv
-    description: |
-      a flat csv file. just great for melting/cutting
   # sample:
   #   path: sample.csv
 

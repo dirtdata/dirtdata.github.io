@@ -6,7 +6,7 @@ import sys
 from typing import NoReturn as NoReturnType
 
 from cli_helpers import *
-
+from publish import publish as publish_command
 
 def myecho(*messages, **kwargs) -> NoReturnType:
     msgtxt = ' '.join(str(m) for m in messages)
@@ -81,6 +81,7 @@ def init(id, dry_run):
 
 
 if __name__ == '__main__':
+    main.add_command(publish_command)
     sys.exit(main())
 
 

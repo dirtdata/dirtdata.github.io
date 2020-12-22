@@ -4,7 +4,9 @@ from ruamel.yaml import YAML
 yaml = YAML()
 
 DATA_DIR = Path('data')
-TEMPLATES = {'meta': Path('assets/templates/meta.template.yaml')}
+TEMPLATES = {'meta': Path('assets/templates/meta.template.yaml'),
+            'index': Path('assets/templates/index.template.html')}
+PUBLISH_PATH = Path('./index.html')
 
 
 def fetch_file(url:str) -> bytes:
