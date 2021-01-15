@@ -2,9 +2,14 @@
 
 ## priority
 
+- rename data/ to p/ (p for projects)
+
 - hack together index.html-making script [2020-12-22]
     - makeit in jinja
-    - simple one pager with a data table
+        - [x] simple one pager with a data table
+        - refine table columns
+        - make header/footer
+    - produce index.json and index.html
     - no need to implement publish.json yet
     - minimal fields:
         - title

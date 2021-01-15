@@ -13,6 +13,8 @@ TODOs of finding and collecting them
 
 ## in progress
 
+
+- [ ] bodega cats (2021-01-15): https://twitter.com/dancow/status/1350214816951099407
 - [x] census surnames 2010
 - [?] federal judges
 - [?] dot gov domains
